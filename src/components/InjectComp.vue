@@ -15,7 +15,9 @@ export default {
   },
   inject: ["prvMemo"],
   methods: {
-    eraseReq() {},
+    eraseReq() {
+      // investigating how to do it.
+    },
   },
 };
 </script>
