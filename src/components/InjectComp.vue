@@ -16,7 +16,7 @@ export default {
   inject: ["prvMemo"],
   methods: {
     eraseReq() {
-      // investigating how to do it.
+      this.$emit("erase-request");
     },
   },
 };

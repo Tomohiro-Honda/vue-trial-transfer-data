@@ -17,7 +17,6 @@ export default {
   methods: {
     saveMemo(text) {
       this.memo = text;
-      console.log(this.memo);
     },
   },
   provide() {
