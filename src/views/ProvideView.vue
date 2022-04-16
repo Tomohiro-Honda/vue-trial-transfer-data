@@ -1,5 +1,5 @@
 <template>
-  <div class="provide">Provide</div>
+  <h2>Provide</h2>
   <div class="text-input-box">
     <input type="text" v-model="text" />
     <input type="button" @click="provideMemo" value="send" />
@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .text-input-box {
   margin: 10px auto;
   width: 250px;

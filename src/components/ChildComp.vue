@@ -1,7 +1,7 @@
 <template>
   <div>
     <textarea cols="30" rows="10" :value="memo" readonly></textarea>
-    <input type="button" value="erease" @click="eraseReq" />
+    <input type="button" value="erase" @click="eraseReq" />
   </div>
 </template>
 

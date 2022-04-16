@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/props">Props</router-link> |
-    <router-link to="/provide">Provide</router-link>
+    <router-link to="/provide">Provide</router-link> |
+    <router-link to="/telepo">Telepo</router-link>
   </nav>
   <router-view @memo-save="saveMemo" />
 </template>
@@ -38,7 +39,7 @@ export default {
 }
 
 nav {
-  padding: 30px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -49,5 +50,10 @@ nav a {
 
 nav a.router-link-exact-active {
   color: rgba(188, 45, 201, 0.589);
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
 }
 </style>

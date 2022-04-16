@@ -1,5 +1,5 @@
 <template>
-  <div class="props">Props</div>
+  <h2>Props</h2>
   <div class="text-input-box">
     <input type="text" v-model="text" />
     <input type="button" @click="wirteMemo" value="send" />

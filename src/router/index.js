@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import PropsView from "../views/PropsView.vue";
-import ProvideView from "../views/ProvideView.vue";
+import HomeView from "@/views/HomeView";
+import PropsView from "@/views/PropsView";
+import ProvideView from "@/views/ProvideView";
+import TelepoView from "@/views/TelepoView";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: "/provide",
     name: "provide",
     component: ProvideView
+  },
+  {
+    path: "/telepo",
+    name: "telepo",
+    component: TelepoView
   }
 ];
 
