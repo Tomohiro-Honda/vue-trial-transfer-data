@@ -3,7 +3,7 @@
   <teleport to="body">
     <div v-if="dispOpen" class="telepo-disp">
       <div class="elment-container">
-        <h3>Displayed text was entered on Provide tab</h3>
+        <h3>{{ description }}</h3>
         <textarea class="text-area" :value="prvMemo"></textarea>
         <button @click="dispOpen = false">close</button>
       </div>
@@ -17,6 +17,7 @@ export default {
   inject: ["prvMemo"],
   data() {
     return {
+      description: "Displayed text was entered on Provide tab",
       dispOpen: false,
     };
   },
@@ -52,12 +53,12 @@ button {
   justify-content: space-between;
   background-color: white;
   width: 300px;
-  height: 600px;
+  height: 80%;
   padding: 5px;
 }
 .telepo-disp textarea {
   resize: none;
-  width: 100%;
+  width: 90%;
   height: 100%;
   border: none;
 }

@@ -3,6 +3,7 @@ import HomeView from "@/views/HomeView";
 import PropsView from "@/views/PropsView";
 import ProvideView from "@/views/ProvideView";
 import TelepoView from "@/views/TelepoView";
+import PiniaView from "@/views/PiniaView";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/telepo",
     name: "telepo",
     component: TelepoView
+  },
+  {
+    path: "/pinia",
+    name: "pinia",
+    component: PiniaView
   }
 ];
 

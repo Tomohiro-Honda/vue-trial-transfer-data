@@ -5,12 +5,18 @@
     <input type="button" @click="wirteMemo" value="send" />
   </div>
   <div class="child-comp-box">
-    <ChildComp :memo="memo" @erase-request="eraseMemo" />
+    <ChildComp
+      :memo="memo"
+      @erase-request="eraseMemo"
+      @save-request="saveMemo"
+      @load-request="loadMemo"
+    />
   </div>
 </template>
 
 <script>
-import ChildComp from "@/components/ChildComp.vue";
+import ChildComp from "@/components/ChildComp";
+import { useMemoStore } from "@/store/memoStore";
 export default {
   name: "PropsView",
   components: {
@@ -20,6 +26,8 @@ export default {
     return {
       text: "",
       memo: "",
+      memoStore: useMemoStore(),
+      isLoaded: false,
     };
   },
   methods: {
@@ -33,6 +41,22 @@ export default {
     },
     eraseMemo() {
       this.memo = "";
+    },
+    saveMemo(text) {
+      let storedMemo = this.memoStore.memo;
+      if (storedMemo !== "" && !this.isLoaded) {
+        alert("Saved memo already exists, please click load.");
+        return;
+      }
+      this.memoStore.addMemo(text);
+    },
+    loadMemo() {
+      if (this.memoStore.memo === "") {
+        alert("No saved memo.");
+        return;
+      }
+      this.memo = this.memoStore.memo;
+      this.isLoaded = true;
     },
   },
 };
