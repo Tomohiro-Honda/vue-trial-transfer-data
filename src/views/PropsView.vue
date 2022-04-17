@@ -26,7 +26,7 @@ export default {
     return {
       text: "",
       memo: "",
-      memoStore: useMemoStore(),
+      memoStore: useMemoStore(),      
       isLoaded: false,
     };
   },

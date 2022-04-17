@@ -8,11 +8,6 @@
 <script>
 export default {
   name: "InjectComp",
-  props: {
-    memo: {
-      type: String,
-    },
-  },
   inject: ["prvMemo"],
   methods: {
     eraseReq() {
